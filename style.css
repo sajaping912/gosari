@@ -26,14 +26,28 @@ body {
     height: 50px;
     background-color: #333;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* 중앙 정렬로 변경 */
     align-items: center;
+    padding: 0 10px;
+}
+
+.left-area {
+    position: absolute;
+    left: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.buttons-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     gap: 20px; /* 버튼 사이 간격 */
 }
 
 .menu-button {
-    padding: 6px 20px;
-    font-size: 16px;
+    padding: 4px 12px;
+    font-size: 11px;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -99,9 +113,23 @@ body {
 }
 
 #time-display {
-    top: 40px;
-    left: 10px;
-    color: #FFD700; /* 시간 표시는 골드 색상으로 강조 */
+    color: #FFFFFF; /* 골드 색상(#FFD700)에서 흰색으로 변경 */
+    font-size: 15px; /* 13px에서 2px 키움 */
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    margin-left: -30px;
+    padding-top: 30px; /* 기존 10px에서 30px로 변경하여 20px 더 내림 */
+}
+
+#time-left {
+    border-radius: 5px;
+    padding: 4px 12px;
+    min-width: 50px;
+    text-align: center;
+    /* 검은 배경 제거: background-color 속성 삭제 */
 }
 
 #start-screen, #game-over {
