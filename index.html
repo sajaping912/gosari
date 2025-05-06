@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>모바일 갤러그</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 상단 회색 영역에 메뉴 버튼 추가 -->
+    <div id="top-menu">
+        <button id="start-menu" class="menu-button">START</button>
+        <button id="pause-menu" class="menu-button">PAUSE</button>
+        <button id="stop-menu" class="menu-button">STOP</button>
+    </div>
+    
+    <div id="game-container">
+        <canvas id="game-canvas"></canvas>
+        <div id="score-display">점수: <span id="score">0</span></div>
+        <div id="lives-display">목숨: <span id="lives">3</span></div>
+        <!-- 남은 시간 표시 추가 -->
+        <div id="time-display">시간: <span id="time-left">60</span>초</div>
+        <div id="game-over" class="hidden">
+            <h2 id="game-over-message">게임 오버</h2>
+            <p>점수: <span id="final-score">0</span></p>
+            <button id="restart-button">다시 시작</button>
+        </div>
+        <div id="start-screen">
+            <h1>모바일 갤러그</h1>
+            <p>제한 시간: 1분</p>
+            <button id="start-button">게임 시작</button>
+            <p class="instructions">화면을 터치하고 드래그하여 우주선을 움직이세요<br>자동으로 발사됩니다</p>
+        </div>
+        <div id="mobile-controls" class="hidden">
+            <div id="touch-area"></div>
+        </div>
+        
+        <!-- 오디오 요소 추가 -->
+        <audio id="background-music" loop>
+            <source src="sounds/background.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="shoot-sound">
+            <source src="sounds/shoot.mp3" type="audio/mpeg">
+        </audio>
+        <audio id="explosion-sound">
+            <source src="sounds/explosion.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>
